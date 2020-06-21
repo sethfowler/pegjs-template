@@ -1,0 +1,32 @@
+{
+  "name": "pegjs-template",
+  "version": "1.0.0",
+  "description": "Build PEG.js grammars using template strings.",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethfowler/pegjs-template.git"
+  },
+  "keywords": [
+    "pegjs",
+    "typescript",
+    "parser",
+    "generator"
+  ],
+  "author": "Seth Fowler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sethfowler/pegjs-template/issues"
+  },
+  "homepage": "https://github.com/sethfowler/pegjs-template#readme",
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "pegjs": "^0.11.0-master.b7b87ea"
+  }
+}
