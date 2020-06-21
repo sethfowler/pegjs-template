@@ -4,8 +4,11 @@ Build [PEG.js](https://pegjs.org) grammars using template strings.
 # Usage
 
 Use the `pegGrammar` function exported by this library as a template tag
-function and interpolate your semantic actions in as functions. Semantic
-action functions must have this type:
+function and interpolate your semantic actions in as functions. If you're using
+the library from TypeScript, you'll need to provide a type parameter for
+`pegGrammar`; this is the type of the AST that your parser returns.
+
+Semantic action functions must have this type:
 
 ```ts
 export type PEGAction = (context: PEGActionContext, ...labels: any[]) => any;
@@ -37,7 +40,7 @@ from the PEG.js docs, rewritten to use this library:
 ```ts
 import { pegGrammar } from 'pegjs-template';
 
-const parser = pegGrammar`
+const parser = pegGrammar<number>`
 // Simple Arithmetics Grammar
 // ==========================
 //
