@@ -11,7 +11,7 @@ the library from TypeScript, you'll need to provide a type parameter for
 Semantic action functions must have this type:
 
 ```ts
-export type PEGAction = (context: PEGActionContext, ...labels: any[]) => any;
+type PEGAction = (context: PEGActionContext, ...labels: any[]) => any;
 ```
 
 The first argument to your semantic action will be a `PEGActionContext` object
