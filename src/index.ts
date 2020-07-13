@@ -57,7 +57,7 @@ export function pegGrammar<T>(
   templateStrings: TemplateStringsArray,
   ...actions: InterpolatableExpression[]
 ): Parser<T> {
-  const templateArguments = new AlternatingList([templateStrings, actions]);
+  const templateArguments = new AlternatingList([templateStrings.raw, actions]);
   const components = buildComponents(templateArguments);
 
   const actionMap: { [name: string]: Action } = {};
@@ -130,7 +130,7 @@ export function pegPartialGrammar(
   templateStrings: TemplateStringsArray,
   ...actions: InterpolatableExpression[]
 ): PartialGrammar {
-  const templateArguments = new AlternatingList([templateStrings, actions]);
+  const templateArguments = new AlternatingList([templateStrings.raw, actions]);
   return new PartialGrammar(buildComponents(templateArguments));
 }
 
