@@ -1,11 +1,12 @@
 {
   "name": "pegjs-template",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "Build PEG.js grammars using template strings.",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
